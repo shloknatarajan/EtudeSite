@@ -225,6 +225,12 @@ h6 {
   font-size: 48px;
 }
 
+@media screen and (max-width: 768px) {
+  #intro .intro-info h2 {
+    font-size: 0.75rem;;
+  }
+}
+
 #intro .intro-info h2 span {
   /* color: #0099ff; */
   font-weight: 500;
@@ -261,6 +267,19 @@ h6 {
 .intro-info h1 {
   font-size: 6rem;
 }
+
+@media screen and (max-width: 768px) {
+  .intro-info h1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #introtext {
+    margin-top: 0px !important;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -551,9 +570,14 @@ h6 {
   color: #0099ff;
 }
 
+@media screen and (min-width: 768px) {
+  #about .about-img {
+    position: relative;
+    margin: 30px 30px 30px 30px;
+  }
+}
 #about .about-img {
   position: relative;
-  margin: 30px 30px 30px 30px;
 }
 
 #about .about-img img {
@@ -1546,8 +1570,15 @@ h6 {
     padding-top: 40px;
   }
 
+  @media screen and (max-width: 768px) {
+    #intro .intro-info {
+      padding-top: 0px !important;
+    }
+  
+  }
+
   #intro .intro-info h2 {
-    font-size: 5rem;
+    font-size: 3rem;
     margin-bottom: 30px;
   }
 
@@ -1625,3 +1656,7 @@ Beta sign up style
 }
 
 
+.resp-container {
+  position: relative;
+  overflow: hidden;
+}
