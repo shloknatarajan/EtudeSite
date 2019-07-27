@@ -197,6 +197,19 @@ h6 {
 .main-pages {
   margin-top: 60px;
 }
+
+@media screen and (max-width: 912px) {
+  #introimage {
+    /* max-width: 500px; */
+    text-align: center;
+    margin-bottom: -5%;
+  }
+
+  #intro {
+    margin-bottom: 7%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   #introimage {
     border-radius: 10px;
@@ -204,6 +217,8 @@ h6 {
     margin-top: 5%;
   }
 }
+
+
 
 
 /*--------------------------------------------------------------
@@ -225,7 +240,7 @@ h6 {
   font-size: 48px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   #intro .intro-info h2 {
     font-size: 0.75rem;;
   }
@@ -1551,6 +1566,12 @@ h6 {
   }
 }
 
+@media (max-width: 912px) {
+  #intro .intro-info {
+    text-align: center;
+  }
+}
+
 @media (max-width: 767px) {
   #intro {
     height: auto;
@@ -1659,4 +1680,13 @@ Beta sign up style
 .resp-container {
   position: relative;
   overflow: hidden;
+  height: 100%;
+  width: auto;
+}
+
+@media screen and (min-width: 1300px) {
+  .resp-container {
+    width: 450px;
+    height: 250px;
+  }
 }
