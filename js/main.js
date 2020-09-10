@@ -98,6 +98,11 @@
     time: 1000
   });
 
+  $('.counterup').counterUp({
+    delay: 10,
+    time: 90000
+  });
+
   // Porfolio isotope and filter
   $(window).on('load', function () {
     var portfolioIsotope = $('.portfolio-container').isotope({
@@ -130,6 +135,7 @@
 
   $('#smarterhighlight').addClass('highlightend');
   $('#introbtnhighlight').addClass('btnhighlight');
+  $('#kickbutton').addClass('btnhighlight');
 
   function isScrolledIntoView(elem) {
     var docViewTop = $(window).scrollTop();
@@ -149,7 +155,8 @@
             // $(this).removeClass('highlightend');
           }
       });
-});
+  });
+
+
 
 })(jQuery);
-

@@ -2,11 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Étude Reader</title>
+  <title>Étude - Read Smarter</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+  <meta content="read, faster, study, reading, summary, notes" name="keywords">
+  <meta content="Artificial intelligence powered summaries and smart searching for any document or book to help you read and find information faster without sacrificing comprehension." name="description">
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145681611-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-145681611-3');
+  </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSBHKH7');</script>
+<!-- End Google Tag Manager -->
+  <script src="https://js.stripe.com/v3/"></script>
   <!-- Favicons -->
   <link href="img/etude/etude logo.jpg" rel="icon">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -27,9 +44,14 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
 
+
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSBHKH7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <!--==========================
   Header
   ============================-->
@@ -56,10 +78,13 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#intro">Home</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#video">About Us</a></li>
           <!-- <li><a href="#team">Team</a></li> -->
-          <li><a href="#footer">Contact Us</a></li>
+          <li><a href="#footer">Contact</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="manage.html">Manage Subscription</a></li>
+          <li id="buynow"><a href="checkout.html">Purchase</a></li>
         </ul>
       </nav><!-- .main-nav -->
       
@@ -77,8 +102,8 @@
           <h2>Read <span id="smarterhighlight" class="introhighlight">Smarter</span></h2>
           <p>Smart highlighting software to improve speed and comprehension</p>
           <div>
-            <a href="#about" id="introbtnhighlight" class="btn-get-started scrollto">See the Video</a>
-            <a class="btn-get-started scrollto" href="https://shloknatarajan.typeform.com/to/r1hY23" data-mode="popup" target="_blank">Beta Signup</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+            <a href="#video" id="introbtnhighlight" class="btn-get-started scrollto">See the Video</a>
+            <a class="btn-get-started scrollto" href="download.html">Try for free</a>
           </div>
         </div>
   
@@ -91,36 +116,82 @@
 
   <main id="main">
 
-    <!--==========================
-      About Us Section
-    ============================-->
-    <section id="about" class="text-center">
-
-        <div class="container-fluid aboutcontainer text-lg-left">
-          <div class="row">
-  
-            <div class="col-lg-5 col-md-6">
-              <div class="about-img">
-                  <iframe class="resp-container" src="https://www.youtube.com/embed/XRDfHvSPtio" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
+  <!--==========================
+    Kickstarter Time Remaining Section
+  ============================--> 
+  <!-- <section id="kickcountdown" class="text-center">
+    <div class="timecontainer container text-center">
+      <h2 id="timeheader">Time Until <span class="highlight">Kickstarter</span> Ends</h2>
+        <div class="row text-center">
+          <div class="timesection col-md-3">
+            <p><span class="timenumbers" id="days"></span><br><span class="lightgreen">days</span></p>
+          </div>
+          <div class="timesection col-md-3">
+            <p><span class="timenumbers" id="hours"></span><br><span class="lightgreen">hours</span></p>
+          </div>
+          <div class="timesection col-md-3">
+            <p><span class="timenumbers" id="minutes"></span><br><span class="lightgreen">minutes</span></p>
+          </div>
+          <div class="timesection col-md-3">
+              <p><span class="timenumbers" id="seconds"></span><br><span class="lightgreen">seconds</span></p>
             </div>
-  
-            <div class="col-lg-7 col-md-6">
-              <div class="about-content">
-                <h2>About Us</h2>
-                <p>Étude provides <span class="highlight">smart highlighting</span> and <span class="highlight">artificial intelligence powered search</span> to help you read and find information faster without sacrificing comprehension</p>
-                <ul>
-                  <li><i class="ion-android-checkmark-circle"></i>34% Decrease in reading time (without sacrificing comprehension)</li>
-                  <li><i class="ion-android-checkmark-circle"></i>8% increase in comprehension over traditional pdf readers. Almost a full letter grade</li>
+        </div>
+    </div>
+  </section> -->
+
+  <!--==========================
+    Video Section
+  ============================-->
+  <section id="video" class="text-center">
+    <!-- <h2>Video</h2> -->
+    <h1>What is Étude?</h1>
+    <div class="featurescontainer container-fluid text-center">
+      <div class="text-lg-left">
+        <div class="text-center">
+            <iframe id="videostyles" class="resp-container" src="https://www.youtube.com/embed/JczlYeWl0zE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section><!-- #video -->
+
+  <!--==========================
+    About Us Section
+  ============================-->
+  <section id="about" class="text-center section-bg">
+
+    <div class="container-fluid aboutcontainer text-lg-left">
+      <div class="text-center">
+        <!-- <h2 id="aboutheader">About Us</h2> -->
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-5 col-md-6">
+          <img id="kickstarterscreen" src="img/etude/highlighted-text_orig.png">
+        </div>
+
+        <div class="col-lg-7 col-md-6">
+          <div class="about-content">
+            <p>Étude provides <span class="highlight">smart highlighting</span> and <span class="highlight">artificial intelligence powered search</span> to help you read and find information faster without sacrificing comprehension</p>
+            <div class="text-center">
+              <div id="listbenefitscontainer" class="text-center">
+                <ul class="listbenefits">
+                  <li>34% Decrease in reading time</span></li>
+                  <li>8% increase in comprehension</span></li>
                 </ul>
+                <p>*Over traditional PDF readers</p>
+                <a class="btn-get-started scrollto" id="kickbutton" href="checkout.html">Start your Free Trial</a> 
+                <a href="#features" id="introbtnhighlight" class="btn-get-started scrollto">Learn More</a>
               </div>
             </div>
           </div>
         </div>
-  
-      </section><!-- #about -->
+      </div>
+    </div>
 
-    <!--==========================
+  </section><!-- #about -->
+
+      <!--==========================
       Features Section
     ============================-->
     <section id="features">
@@ -170,18 +241,19 @@
                   </p>
               </div>
             </div>
-
-
-
           </div>
         </div>
       </section><!-- #features -->
 
+    
+<!--==========================
+    Beta Signup
+  ============================-->
     <section id="betasignup">
       <div class="container text-center">
         <h1>Want to give it a try?</h1>
-        <p>​Please fill out the quick survey below so we know how Étude how can best fit you.<br>You could be invited to participate in our beta!</p>
-        <a class="btn-get-started scrollto" href="https://shloknatarajan.typeform.com/to/r1hY23" data-mode="popup" target="_blank">Sign Up</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+        <p>Try Etude out free for 14 days and let us know what you think! After that, continue using Etude for only 1.99/month. That's a month of machine learning powered document analysis for less than a cup of coffee</p>
+        <a class="btn-get-started scrollto" href="checkout.html">Sign Up</a>
       </div>
     </section>
 
@@ -203,7 +275,7 @@
                 <div class="col-sm-6">
 
                   <div class="footer-info">
-                    <h3>Etude</h3>
+                    <h3>Étude</h3>
                     <!-- <a class="btn-get-started scrollto" href="#"">Newsletter</a> -->
                   </div>
                 </div>
@@ -212,9 +284,12 @@
                   <div class="footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                      <li><a href="index.html">Home</a></li>
+                      <li><a href="#intro">Home</a></li>
+                      <li><a href="#video">Video</a></li>
                       <li><a href="#about">About us</a></li>
-                      <li><a href="#features">Services</a></li>
+                      <li><a href="#features">Features</a></li>
+                      <li><a href="#footer">Contact Us</a></li>
+                      <li><a href="termsandconditions.pdf">Terms of Service</a></li>
                       <!-- <li><a href="#">Terms of service</a></li>
                       <li><a href="#">Privacy policy</a></li> -->
                     </ul>
@@ -229,8 +304,8 @@
 
               <div class="form">
                 <h4>Send us a message</h4>
-                <p>Interested in working with us? Send us a message below or directly to jadetechnologiesllc@gmail.com</p>
-                <form action="https://formspree.io/jadetechnologiesllc@gmail.com" method="POST" role="form" class="contactForm">
+                <p>Interested in working with us? <span class="highlight">Send us a message</span> below or directly to etudereaderllc@gmail.com</p>
+                <form action="https://formspree.io/etudereaderllc@gmail.com" method="POST" role="form" class="contactForm">
                   <div class="form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                     <div class="validation"></div>
@@ -279,11 +354,10 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
   <script src="lib/lightbox/js/lightbox.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  <!-- <script src="js/countdown.js"></script> -->
 
 </body>
 </html>
