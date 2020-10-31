@@ -691,6 +691,12 @@ h6 {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #videostyles {
+    height: 40vh;
+  }
+}
+
 .gradientbg {
   background: #7918f2;
   background: -webkit-linear-gradient(-45deg, #4801ff, #7918f2, #ac32e4);
@@ -1964,6 +1970,12 @@ Subscribe Page
 
 #downloadheader {
   padding-top: 17%;
+}
+
+@media screen and (max-width: 768px) {
+  #downloadheader {
+    padding-top: 30%;
+  }
 }
 
 /* Mobile first - @media is for lager screens */
