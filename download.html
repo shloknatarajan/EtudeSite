@@ -83,10 +83,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#video">About Us</a></li>
                     <!-- <li><a href="#team">Team</a></li> -->
-                    <li><a href="index.html#footer">Contact</a></li>
-                    <li class="active"><a href="download.html">Download</a></li>
-                    <li><a href="manage.html">Manage Subscription</a></li>
-                    <li id="buynow"><a href="checkout.html">Purchase</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                    <li id="buynow"><a href="download.html">Download</a></li>
                 </ul>
             </nav><!-- .main-nav -->
 
@@ -96,14 +94,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container text-center" id="downloadheader">
         <h1>Get the Main Points Fast</h1>
         <h4>Use AI powered document analysis to save time reading</h4>
-        <input type="email" placeholder="Enter your email address" id="trialemailinput" class="downloadinputs text-center">
+        <!-- <input type="email" placeholder="Enter your email address" id="trialemailinput" class="downloadinputs text-center">
         <div class="text-center">
             <input style="text-align: center;" type="referral" class="downloadinputs" placeholder="If referred, by who?" id="referralinput">
-        </div>
-        <button id="trialbutton" onclick="document.getElementById('trialbutton').disabled = true;">Start Free Trial</button>
-        <p id="trialemailerror">Please enter a valid email address</p>
+        </div> -->
+        <!-- <button id="trialbutton" onclick="document.getElementById('trialbutton').disabled = true;">Start Free Trial</button>
+        <p id="trialemailerror">Please enter a valid email address</p> -->
     </div>
-    <div class="container" id="downloadlinkscontainer">
+    <div class="container pt-5 mb-5" id="">
         <div class="row">
             <div class="col-6 text-center downloadbox manageaselector">
                 <h3><a class="downloadbutton" href="https://www.dropbox.com/s/qafencevfs9n0q4/Etude%20Setup%201.1.6.exe?dl=1">Download Étude for <span class="fakehighlight">Windows</span></a></h3>
@@ -114,10 +112,89 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="row">
             <div id="downloadcaption" class="col-md-12 text-center">
-                <h4>Thank you for downloading Étude! You can use Étude for free for 14 days. After the trial period has elapsed, you can purchase a license key <a style="color: navy" href="checkout.html">here</a> for $1.99/month</h4>
+                <h4>Thank you for downloading Étude! We've currently stopped development and some features might be a little buggy but if you have any suggestions feel free to reach out at etudereaderllc@gmail.com</h4>
             </div>
         </div>
     </div>
+
+    <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" class="section-bg">
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6 order-md-first order-last">
+
+            <div class="row">
+
+                <div class="col-sm-6">
+
+                  <div class="footer-info">
+                    <h3>Étude</h3>
+                    <!-- <a class="btn-get-started scrollto" href="#"">Newsletter</a> -->
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="index.html#video">Video</a></li>
+                      <li><a href="index.html#about">About us</a></li>
+                      <li><a href="index.html#features">Features</a></li>
+                      <li><a href="#footer">Contact Us</a></li>
+                      <li><a href="termsandconditions.pdf">Terms of Service</a></li>
+                      <!-- <li><a href="#">Terms of service</a></li>
+                      <li><a href="#">Privacy policy</a></li> -->
+                    </ul>
+                  </div>
+
+                </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+
+              <div class="form">
+                <h4>Send us a message</h4>
+                <p>Interested in working with us? <span class="highlight">Send us a message</span> below or directly to etudereaderllc@gmail.com</p>
+                <form action="https://formspree.io/etudereaderllc@gmail.com" method="POST" role="form" class="contactForm">
+                  <div class="form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                    <div class="validation"></div>
+                  </div>
+                  <div id="sendmessage">Your message has been sent. Thank you!</div>
+                  <div id="errormessage"></div>
+                  <div class="text-center"><button id="submitbutton" type="submit" title="Send Message">Send Message</button></div>
+                </form>
+              </div>
+
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </div>
+  </footer><!-- #footer -->
 
     <!-- JavaScript Libraries -->
     <script src="lib/jquery/jquery.min.js"></script>
